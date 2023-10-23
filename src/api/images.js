@@ -4,8 +4,8 @@ const imageInstance = axios.create({
   baseURL: "https://api.unsplash.com",
 });
 
-imageInstance.defaults.headers.common["Authorization"] = `Client-ID ${
-  import.meta.env.VITE_ACCESS_KEY
-}`;
+imageInstance.defaults.headers.common[
+  "Authorization"
+] = `Client-ID AXYkQ80gxaKjlC99-akqq6fr3TIiFFp2cBCFq8iP3TI`;
 
 export default imageInstance;
