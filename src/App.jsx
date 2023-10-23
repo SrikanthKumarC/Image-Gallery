@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
 import CardComponent from "./components/CardComponent";
 import useSearch from "./hooks/useSearch";
-import "react-loading-skeleton/dist/skeleton.css";
 
 const breakpointColumnsObj = {
   default: 4,
