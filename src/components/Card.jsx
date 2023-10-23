@@ -1,48 +1,29 @@
 import Avatar from "@mui/material/Avatar";
-import Dialog from "./Dialog";
-function Card({ image }) {
-  const profilePicture = image.user.profile_image.small;
-  const imageProps = {
-    src: image.urls.regular,
-    alt: image.alt_description,
-    width: "100%",
-    height: "100%",
-  };
-  const imageHighRes = image.urls.full;
-  const likes = image.likes;
-  const { username, name } = image.user;
-  const authorLink = image.user.links.html;
+
+function Card({ imageProps, profilePicture, likes, user, authorLink }) {
+  const { username, name } = user;
+
   return (
-    <Dialog>
-      <Dialog.Trigger className="mt-4">
-        <div className="bg-white border border-gray-300">
-          <img {...imageProps} />
-          <div className="flex p-4 justify-between">
-            <div className="flex gap-2 self-center">
-              <Avatar
-                alt="Remy Sharp"
-                className="self-center"
-                sx={{ width: 46, height: 46 }}
-                src={profilePicture}
-              />
-              <div className="">
-                <p className="text-xl">{name}</p>
-                <p className="text-gray-600">
-                  <a href={authorLink}>@{username}</a>
-                </p>
-              </div>
-            </div>
-            Likes: {likes}
+    <div className="bg-white border dark:border-none rounded-lg dark:bg-gray-950 dark:text-white border-gray-300">
+      <img {...imageProps} className="rounded-t-lg" />
+      <div className="flex p-4 justify-between">
+        <div className="flex gap-2 self-center">
+          <Avatar
+            alt="Remy Sharp"
+            className="self-center"
+            sx={{ width: 36, height: 36 }}
+            src={profilePicture}
+          />
+          <div className="flex flex-col items-start">
+            <p className="text-xl text-left md:text-lg">{name}</p>
+            <p className="text-gray-600 md:text-sm">
+              <a href={authorLink}>@{username}</a>
+            </p>
           </div>
         </div>
-      </Dialog.Trigger>
-      <Dialog.Content>
-        <div className=" border-2 border-red-600">
-          <img {...imageProps} src={imageHighRes} className="block w-full max-h-[90vh]" />
-          <p>This is dialog content</p>
-        </div>
-      </Dialog.Content>
-    </Dialog>
+        Likes: {likes}
+      </div>
+    </div>
   );
 }
 
