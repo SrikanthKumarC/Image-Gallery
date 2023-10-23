@@ -48,7 +48,7 @@ function CardModal({
                   strokeWidth={2}
                 />
               </Popover.Trigger>
-              <Popover.Content className="rounded relative text-white p-5 bg-white shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] focus:shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2),0_0_0_2px_theme(colors.violet7)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade">
+              <Popover.Content className="rounded relative text-white p-5 bg-white shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] ">
                 <div className="bg-white relative rounded-sm mt-6 ml-1 px-2 py-2">
                   <RiTriangleFill className="absolute text-white -top-3 right-10" />
                   <p>Likes: {likes}</p>
